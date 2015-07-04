@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8736BB9A2DEEE92C7EEA2FBF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5FBD498F59B92B0E9CD732 /* libPods.a */; };
+		B04999FB1B477A870088C525 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B04999FA1B477A870088C525 /* main.m */; };
+		B04999FE1B477A870088C525 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B04999FD1B477A870088C525 /* AppDelegate.m */; };
+		B0499A011B477A870088C525 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A001B477A870088C525 /* ViewController.m */; };
+		B0499A041B477A870088C525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0499A021B477A870088C525 /* Main.storyboard */; };
+		B0499A061B477A870088C525 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0499A051B477A870088C525 /* Images.xcassets */; };
+		B0499A091B477A870088C525 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0499A071B477A870088C525 /* LaunchScreen.xib */; };
+		B0499A151B477A870088C525 /* GovHackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A141B477A870088C525 /* GovHackTests.m */; };
+		B0499A2A1B479BA40088C525 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A251B479BA40088C525 /* ViewUtils.m */; };
+		B0499A301B479E6F0088C525 /* CTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A2F1B479E6F0088C525 /* CTCollectionViewCell.m */; };
+		B0499A341B479EF30088C525 /* GHData.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A331B479EF30088C525 /* GHData.m */; };
+		B0499A371B47A1450088C525 /* industryoccupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B0499A361B47A1450088C525 /* industryoccupations.json */; };
+		B0499A3B1B47AB200088C525 /* IndustryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A3A1B47AB200088C525 /* IndustryViewController.m */; };
+		B0499A3D1B47B15E0088C525 /* donut.html in Resources */ = {isa = PBXBuildFile; fileRef = B0499A3C1B47B15E0088C525 /* donut.html */; };
+		B0499AA71B47BB750088C525 /* polar.js in Resources */ = {isa = PBXBuildFile; fileRef = B0499AA61B47BB750088C525 /* polar.js */; };
+		B04EBDC51B47C34E00A1202B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B04EBDC41B47C34E00A1202B /* index.html */; };
+		B04EBDF71B47C56A00A1202B /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = B04EBDF51B47C56A00A1202B /* Chart.js */; };
+		B04EBDF81B47C56A00A1202B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B04EBDF61B47C56A00A1202B /* index.html */; };
+		B04EBDFA1B47DB5800A1202B /* occupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B04EBDF91B47DB5800A1202B /* occupations.json */; };
+		B04EBDFD1B47E79900A1202B /* IndustryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B04EBDFC1B47E79900A1202B /* IndustryTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0499A0F1B477A870088C525 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B04999ED1B477A870088C525 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B04999F41B477A870088C525;
+			remoteInfo = GovHack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C5FBD498F59B92B0E9CD732 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AA68FBFF6BE27BD8BB2F668 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4DF01403CC21BD002D7F2BBF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B04999F51B477A870088C525 /* GovHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GovHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B04999F91B477A870088C525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B04999FA1B477A870088C525 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B04999FC1B477A870088C525 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B04999FD1B477A870088C525 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B04999FF1B477A870088C525 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B0499A001B477A870088C525 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B0499A031B477A870088C525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0499A051B477A870088C525 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B0499A081B477A870088C525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B0499A0E1B477A870088C525 /* GovHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GovHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0499A131B477A870088C525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0499A141B477A870088C525 /* GovHackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GovHackTests.m; sourceTree = "<group>"; };
+		B0499A241B479BA40088C525 /* ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewUtils.h; path = "ViewUtils-master/ViewUtils/ViewUtils.h"; sourceTree = "<group>"; };
+		B0499A251B479BA40088C525 /* ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewUtils.m; path = "ViewUtils-master/ViewUtils/ViewUtils.m"; sourceTree = "<group>"; };
+		B0499A2E1B479E6F0088C525 /* CTCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCollectionViewCell.h; sourceTree = "<group>"; };
+		B0499A2F1B479E6F0088C525 /* CTCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCollectionViewCell.m; sourceTree = "<group>"; };
+		B0499A321B479EF30088C525 /* GHData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHData.h; sourceTree = "<group>"; };
+		B0499A331B479EF30088C525 /* GHData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHData.m; sourceTree = "<group>"; };
+		B0499A361B47A1450088C525 /* industryoccupations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = industryoccupations.json; sourceTree = "<group>"; };
+		B0499A381B47A2B90088C525 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		B0499A391B47AB200088C525 /* IndustryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndustryViewController.h; sourceTree = "<group>"; };
+		B0499A3A1B47AB200088C525 /* IndustryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndustryViewController.m; sourceTree = "<group>"; };
+		B0499A3C1B47B15E0088C525 /* donut.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = donut.html; sourceTree = "<group>"; };
+		B0499AA61B47BB750088C525 /* polar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = polar.js; sourceTree = "<group>"; };
+		B04EBDC41B47C34E00A1202B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		B04EBDF51B47C56A00A1202B /* Chart.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = Chart.js; path = Pods/TWRCharts/TWRCharts/Chart.js; sourceTree = "<group>"; };
+		B04EBDF61B47C56A00A1202B /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = index.html; path = Pods/TWRCharts/TWRCharts/index.html; sourceTree = "<group>"; };
+		B04EBDF91B47DB5800A1202B /* occupations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = occupations.json; sourceTree = "<group>"; };
+		B04EBDFB1B47E79900A1202B /* IndustryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndustryTableViewCell.h; sourceTree = "<group>"; };
+		B04EBDFC1B47E79900A1202B /* IndustryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndustryTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B04999F21B477A870088C525 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8736BB9A2DEEE92C7EEA2FBF /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0499A0B1B477A870088C525 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE910F1F2C83996DF235EB20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AA68FBFF6BE27BD8BB2F668 /* Pods.debug.xcconfig */,
+				4DF01403CC21BD002D7F2BBF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B04999EC1B477A870088C525 = {
+			isa = PBXGroup;
+			children = (
+				B04EBDF51B47C56A00A1202B /* Chart.js */,
+				B04EBDF61B47C56A00A1202B /* index.html */,
+				B04999F71B477A870088C525 /* GovHack */,
+				B0499A111B477A870088C525 /* GovHackTests */,
+				B04999F61B477A870088C525 /* Products */,
+				AE910F1F2C83996DF235EB20 /* Pods */,
+				DEEB13D19FC11AFDA3BBD7FB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B04999F61B477A870088C525 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B04999F51B477A870088C525 /* GovHack.app */,
+				B0499A0E1B477A870088C525 /* GovHackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B04999F71B477A870088C525 /* GovHack */ = {
+			isa = PBXGroup;
+			children = (
+				B04999FC1B477A870088C525 /* AppDelegate.h */,
+				B04999FD1B477A870088C525 /* AppDelegate.m */,
+				B0499A311B479E9B0088C525 /* Model */,
+				B0499A2D1B479E590088C525 /* Views */,
+				B0499A2C1B479E4F0088C525 /* View Controllers */,
+				B0499A351B47A11E0088C525 /* resources */,
+				B0499A1E1B479B910088C525 /* libs */,
+				B04999F81B477A870088C525 /* Supporting Files */,
+			);
+			path = GovHack;
+			sourceTree = "<group>";
+		};
+		B04999F81B477A870088C525 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0499A021B477A870088C525 /* Main.storyboard */,
+				B0499A051B477A870088C525 /* Images.xcassets */,
+				B0499A071B477A870088C525 /* LaunchScreen.xib */,
+				B0499A381B47A2B90088C525 /* PrefixHeader.pch */,
+				B04999F91B477A870088C525 /* Info.plist */,
+				B04999FA1B477A870088C525 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0499A111B477A870088C525 /* GovHackTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0499A141B477A870088C525 /* GovHackTests.m */,
+				B0499A121B477A870088C525 /* Supporting Files */,
+			);
+			path = GovHackTests;
+			sourceTree = "<group>";
+		};
+		B0499A121B477A870088C525 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0499A131B477A870088C525 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0499A1E1B479B910088C525 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				B0499A241B479BA40088C525 /* ViewUtils.h */,
+				B0499A251B479BA40088C525 /* ViewUtils.m */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		B0499A2C1B479E4F0088C525 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B04999FF1B477A870088C525 /* ViewController.h */,
+				B0499A001B477A870088C525 /* ViewController.m */,
+				B0499A391B47AB200088C525 /* IndustryViewController.h */,
+				B0499A3A1B47AB200088C525 /* IndustryViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B0499A2D1B479E590088C525 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0499A2E1B479E6F0088C525 /* CTCollectionViewCell.h */,
+				B0499A2F1B479E6F0088C525 /* CTCollectionViewCell.m */,
+				B04EBDFB1B47E79900A1202B /* IndustryTableViewCell.h */,
+				B04EBDFC1B47E79900A1202B /* IndustryTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B0499A311B479E9B0088C525 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0499A321B479EF30088C525 /* GHData.h */,
+				B0499A331B479EF30088C525 /* GHData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B0499A351B47A11E0088C525 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				B04EBDF91B47DB5800A1202B /* occupations.json */,
+				B0499A361B47A1450088C525 /* industryoccupations.json */,
+				B0499A3C1B47B15E0088C525 /* donut.html */,
+				B04EBDC41B47C34E00A1202B /* index.html */,
+				B0499AA61B47BB750088C525 /* polar.js */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		DEEB13D19FC11AFDA3BBD7FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C5FBD498F59B92B0E9CD732 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B04999F41B477A870088C525 /* GovHack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0499A181B477A870088C525 /* Build configuration list for PBXNativeTarget "GovHack" */;
+			buildPhases = (
+				6679ADD4E47A4A9BCEDE5DE8 /* Check Pods Manifest.lock */,
+				B04999F11B477A870088C525 /* Sources */,
+				B04999F21B477A870088C525 /* Frameworks */,
+				B04999F31B477A870088C525 /* Resources */,
+				9DD2AD383138F2094A68CCCA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GovHack;
+			productName = GovHack;
+			productReference = B04999F51B477A870088C525 /* GovHack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0499A0D1B477A870088C525 /* GovHackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0499A1B1B477A870088C525 /* Build configuration list for PBXNativeTarget "GovHackTests" */;
+			buildPhases = (
+				B0499A0A1B477A870088C525 /* Sources */,
+				B0499A0B1B477A870088C525 /* Frameworks */,
+				B0499A0C1B477A870088C525 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0499A101B477A870088C525 /* PBXTargetDependency */,
+			);
+			name = GovHackTests;
+			productName = GovHackTests;
+			productReference = B0499A0E1B477A870088C525 /* GovHackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B04999ED1B477A870088C525 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Lewis Daly";
+				TargetAttributes = {
+					B04999F41B477A870088C525 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = UYPHRF2M5D;
+					};
+					B0499A0D1B477A870088C525 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = B04999F41B477A870088C525;
+					};
+				};
+			};
+			buildConfigurationList = B04999F01B477A870088C525 /* Build configuration list for PBXProject "GovHack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B04999EC1B477A870088C525;
+			productRefGroup = B04999F61B477A870088C525 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B04999F41B477A870088C525 /* GovHack */,
+				B0499A0D1B477A870088C525 /* GovHackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B04999F31B477A870088C525 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04EBDF71B47C56A00A1202B /* Chart.js in Resources */,
+				B04EBDF81B47C56A00A1202B /* index.html in Resources */,
+				B04EBDFA1B47DB5800A1202B /* occupations.json in Resources */,
+				B04EBDC51B47C34E00A1202B /* index.html in Resources */,
+				B0499A041B477A870088C525 /* Main.storyboard in Resources */,
+				B0499AA71B47BB750088C525 /* polar.js in Resources */,
+				B0499A091B477A870088C525 /* LaunchScreen.xib in Resources */,
+				B0499A371B47A1450088C525 /* industryoccupations.json in Resources */,
+				B0499A061B477A870088C525 /* Images.xcassets in Resources */,
+				B0499A3D1B47B15E0088C525 /* donut.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0499A0C1B477A870088C525 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6679ADD4E47A4A9BCEDE5DE8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9DD2AD383138F2094A68CCCA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B04999F11B477A870088C525 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0499A3B1B47AB200088C525 /* IndustryViewController.m in Sources */,
+				B0499A341B479EF30088C525 /* GHData.m in Sources */,
+				B0499A011B477A870088C525 /* ViewController.m in Sources */,
+				B0499A301B479E6F0088C525 /* CTCollectionViewCell.m in Sources */,
+				B0499A2A1B479BA40088C525 /* ViewUtils.m in Sources */,
+				B04999FE1B477A870088C525 /* AppDelegate.m in Sources */,
+				B04999FB1B477A870088C525 /* main.m in Sources */,
+				B04EBDFD1B47E79900A1202B /* IndustryTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0499A0A1B477A870088C525 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0499A151B477A870088C525 /* GovHackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0499A101B477A870088C525 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B04999F41B477A870088C525 /* GovHack */;
+			targetProxy = B0499A0F1B477A870088C525 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0499A021B477A870088C525 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0499A031B477A870088C525 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0499A071B477A870088C525 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0499A081B477A870088C525 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0499A161B477A870088C525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		B0499A171B477A870088C525 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0499A191B477A870088C525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA68FBFF6BE27BD8BB2F668 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				INFOPLIST_FILE = GovHack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		B0499A1A1B477A870088C525 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DF01403CC21BD002D7F2BBF /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				INFOPLIST_FILE = GovHack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		B0499A1C1B477A870088C525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GovHackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GovHack.app/GovHack";
+			};
+			name = Debug;
+		};
+		B0499A1D1B477A870088C525 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GovHackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GovHack.app/GovHack";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B04999F01B477A870088C525 /* Build configuration list for PBXProject "GovHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0499A161B477A870088C525 /* Debug */,
+				B0499A171B477A870088C525 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0499A181B477A870088C525 /* Build configuration list for PBXNativeTarget "GovHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0499A191B477A870088C525 /* Debug */,
+				B0499A1A1B477A870088C525 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0499A1B1B477A870088C525 /* Build configuration list for PBXNativeTarget "GovHackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0499A1C1B477A870088C525 /* Debug */,
+				B0499A1D1B477A870088C525 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B04999ED1B477A870088C525 /* Project object */;
+}
