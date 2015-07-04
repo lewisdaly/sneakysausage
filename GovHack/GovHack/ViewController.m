@@ -18,8 +18,10 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIView *titleView; //left static panel
-@property (nonatomic, strong) UITextView *titleText;
-@property (nonatomic, strong) UITextView *subtitleText;
+@property (nonatomic, strong) UILabel *titleText;
+@property (nonatomic, strong) UILabel *subtitleText;
+@property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, strong) UILabel *contentLabel;
 
 
 
@@ -37,7 +39,7 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     [self.collectionView registerClass:[CTCollectionViewCell class] forCellWithReuseIdentifier:CELL_ID];
 
-    self.collectionView.backgroundColor = [UIColor clearColor];
+    self.collectionView.backgroundColor = UIColorFromRGB(0xfffeff);
     
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
@@ -47,19 +49,39 @@
     
     //Set up the side panel
     self.titleView = [[UIView alloc] init];
-    self.titleView.backgroundColor = [UIColor grayColor];
+    self.titleView.backgroundColor = UIColorFromRGB(0x573e7e);
     
+    self.searchBar = [[UISearchBar alloc] init];
+    [self.searchBar setPlaceholder:@"Search"];
+    self.searchBar.searchBarStyle = UISearchBarStyleMinimal;
     
-    self.titleText = [[UITextView alloc] init];
-    [self.titleText setText:@"Title"];
+    self.titleText = [[UILabel alloc] init];
+    [self.titleText setText:@"Industries"];
+    [self.titleText setFont:[UIFont fontWithName:@"TrebuchetMS" size:45]];
     self.titleText.backgroundColor = [UIColor clearColor];
+    [self.titleText setTextColor:UIColorFromRGB(0xfff2ff)];
     
-    self.subtitleText = [[UITextView alloc] init];
-    [self.subtitleText setText:@"Subtitle"];
+    self.subtitleText = [[UILabel alloc] init];
+    [self.subtitleText setText:@"Select an Industry"];
+    [self.subtitleText setFont:[UIFont fontWithName:@"TrebuchetMS" size:25]];
     self.subtitleText.backgroundColor = [UIColor clearColor];
+    [self.subtitleText setTextColor:UIColorFromRGB(0x8c74a6)];
+
     
+    self.contentLabel = [[UILabel alloc] init];
+    [self.contentLabel setText:@"_____ gives SA businesses insights into their industry. Using a variety of Open Data, "];
+    [self.contentLabel setFont:[UIFont fontWithName:@"TrebuchetMS" size:17]];
+    self.contentLabel.backgroundColor = [UIColor clearColor];
+    self.contentLabel.numberOfLines = 9;
+    [self.contentLabel setTextColor:UIColorFromRGB(0x8c74a6)];
+    [self.contentLabel setTextAlignment:NSTextAlignmentJustified];
+
+    
+    
+    [self.titleView addSubview:self.searchBar];
     [self.titleView addSubview:self.titleText];
     [self.titleView addSubview:self.subtitleText];
+    [self.titleView addSubview:self.contentLabel];
     
     
     
@@ -67,12 +89,16 @@
     [self.view addSubview:self.titleView];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.title = @"Sneaky Spicy Sausage";
+
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    
 }
 
 
@@ -88,8 +114,13 @@
     
     
     int padding = 20;
-    self.titleText.frame = CGRectMake(0, padding, panelWidth, 50);
-    self.subtitleText.frame = CGRectMake(0, self.titleText.bottom + padding, panelWidth, 50);
+    int smallPadding = 5;
+    self.searchBar.frame = CGRectMake(smallPadding, smallPadding, panelWidth - smallPadding*2, 40);
+    self.titleText.frame = CGRectMake(padding, _searchBar.bottom + padding, panelWidth, 50);
+    self.subtitleText.frame = CGRectMake(padding, self.titleText.bottom, panelWidth, 50);
+    self.contentLabel.frame = CGRectMake(padding, self.subtitleText.bottom + padding, panelWidth - padding, 300);
+    
+    [self.contentLabel sizeToFit];
 
 }
 
@@ -122,7 +153,7 @@
     [cell.titleLabel setText:industryName];
 
     
-    cell.backgroundColor = indexPath.row % 2 == 0 ? [UIColor grayColor] : [UIColor redColor];
+    cell.backgroundColor = indexPath.row % 2 == 0 ? UIColorFromRGB(0xf4f4f4) : UIColorFromRGB(0xe8e8e8);
     
     return cell;
 }

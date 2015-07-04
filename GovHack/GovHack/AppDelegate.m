@@ -22,10 +22,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     UINavigationController *navController = [[UINavigationController alloc] init];
+    navController.navigationBar.barTintColor = UIColorFromRGB(0x4f3972);
+    
 //    navController.navigationBarHidden = YES;
     
     ViewController *rootVC = [[ViewController alloc] init];
     [navController pushViewController:rootVC animated:NO];
+    
     self.window.rootViewController = navController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

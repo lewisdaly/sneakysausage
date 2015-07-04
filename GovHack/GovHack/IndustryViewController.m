@@ -18,8 +18,8 @@
 @interface IndustryViewController () <UIWebViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property UIWebView *webView;
-@property TWRChartView *chartView;
-@property UITableView *tableView;
+@property (nonatomic, strong) TWRChartView *chartView;
+@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSDictionary *industry;
 @property (nonatomic, strong) NSArray *topOccupations;
 @property (nonatomic, strong) NSNumber *totalOccupationCount;
@@ -136,56 +136,30 @@
     self.totalOccupationCount = [NSNumber numberWithInt:total];
 }
 
-//- (void)loadPieChart
-//{
-//    // Values
-//    NSMutableArray *values = [[NSMutableArray alloc] init];
-//    for (NSDictionary *dict in self.topOccupations)
-//    {
-//        [values addObject:dict[@"maxValue"]];
-//    }
-//    
-//    
-//    // Colors
-//    UIColor *color1 = [UIColor colorWithHue:0.5 saturation:0.6 brightness:0.6 alpha:1.0];
-//    UIColor *color2 = [UIColor colorWithHue:0.6 saturation:0.6 brightness:0.6 alpha:1.0];
-//    UIColor *color3 = [UIColor colorWithHue:0.7 saturation:0.6 brightness:0.6 alpha:1.0];
-//    UIColor *color4 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
-//    UIColor *color5 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
-//
-//    self.colors = @[color1, color2, color3, color4, color1, color2];
-//    
-//    // Doughnut Chart
-//    TWRCircularChart *pieChart = [[TWRCircularChart alloc] initWithValues:values
-//                                                                   colors:_colors
-//                                                                     type:TWRCircularChartTypeDoughnut
-//                                                                 animated:YES];
-//    
-//    // You can even leverage callbacks when chart animation ends!
-//    [_chartView loadCircularChart:pieChart withCompletionHandler:^(BOOL finished) {
-//        if (finished) {
-//            NSLog(@"Animation finished!!!");
-//        }
-//    }];
-//}
-
-
-- (void)loadPieChart {
+- (void)loadPieChart
+{
     // Values
-    NSArray *values = @[@20, @30, @15, @5];
+    NSMutableArray *values = [[NSMutableArray alloc] init];
+    for (NSDictionary *dict in self.topOccupations)
+    {
+        [values addObject:dict[@"maxValue"]];
+    }
+    
     
     // Colors
     UIColor *color1 = [UIColor colorWithHue:0.5 saturation:0.6 brightness:0.6 alpha:1.0];
     UIColor *color2 = [UIColor colorWithHue:0.6 saturation:0.6 brightness:0.6 alpha:1.0];
     UIColor *color3 = [UIColor colorWithHue:0.7 saturation:0.6 brightness:0.6 alpha:1.0];
     UIColor *color4 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
-    NSArray *colors = @[color1, color2, color3, color4];
+    UIColor *color5 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
+
+    self.colors = @[color1, color2, color3, color4, color1, color2];
     
     // Doughnut Chart
     TWRCircularChart *pieChart = [[TWRCircularChart alloc] initWithValues:values
-                                                                   colors:colors
+                                                                   colors:_colors
                                                                      type:TWRCircularChartTypeDoughnut
-                                                                 animated:NO];
+                                                                 animated:YES];
     
     // You can even leverage callbacks when chart animation ends!
     [_chartView loadCircularChart:pieChart withCompletionHandler:^(BOOL finished) {
@@ -194,6 +168,7 @@
         }
     }];
 }
+
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
