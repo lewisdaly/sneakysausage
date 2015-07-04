@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8736BB9A2DEEE92C7EEA2FBF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5FBD498F59B92B0E9CD732 /* libPods.a */; };
-		B0320A1F1B47F4B4006AA3D1 /* OccupationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0320A1E1B47F4B4006AA3D1 /* OccupationViewController.m */; };
 		B04999FB1B477A870088C525 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B04999FA1B477A870088C525 /* main.m */; };
 		B04999FE1B477A870088C525 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B04999FD1B477A870088C525 /* AppDelegate.m */; };
 		B0499A011B477A870088C525 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A001B477A870088C525 /* ViewController.m */; };
@@ -19,15 +18,16 @@
 		B0499A2A1B479BA40088C525 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A251B479BA40088C525 /* ViewUtils.m */; };
 		B0499A301B479E6F0088C525 /* CTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A2F1B479E6F0088C525 /* CTCollectionViewCell.m */; };
 		B0499A341B479EF30088C525 /* GHData.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A331B479EF30088C525 /* GHData.m */; };
-		B0499A371B47A1450088C525 /* industryoccupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B0499A361B47A1450088C525 /* industryoccupations.json */; };
 		B0499A3B1B47AB200088C525 /* IndustryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0499A3A1B47AB200088C525 /* IndustryViewController.m */; };
 		B0499A3D1B47B15E0088C525 /* donut.html in Resources */ = {isa = PBXBuildFile; fileRef = B0499A3C1B47B15E0088C525 /* donut.html */; };
 		B0499AA71B47BB750088C525 /* polar.js in Resources */ = {isa = PBXBuildFile; fileRef = B0499AA61B47BB750088C525 /* polar.js */; };
 		B04EBDC51B47C34E00A1202B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B04EBDC41B47C34E00A1202B /* index.html */; };
 		B04EBDF71B47C56A00A1202B /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = B04EBDF51B47C56A00A1202B /* Chart.js */; };
 		B04EBDF81B47C56A00A1202B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = B04EBDF61B47C56A00A1202B /* index.html */; };
-		B04EBDFA1B47DB5800A1202B /* occupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B04EBDF91B47DB5800A1202B /* occupations.json */; };
 		B04EBDFD1B47E79900A1202B /* IndustryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B04EBDFC1B47E79900A1202B /* IndustryTableViewCell.m */; };
+		B07951091B48050600C4DC19 /* industryoccupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B07951071B48050600C4DC19 /* industryoccupations.json */; };
+		B079510A1B48050600C4DC19 /* occupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B07951081B48050600C4DC19 /* occupations.json */; };
+		B0AAB5BD1B480715002C1EE5 /* OccupationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AAB5BC1B480715002C1EE5 /* OccupationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,6 @@
 		0C5FBD498F59B92B0E9CD732 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA68FBFF6BE27BD8BB2F668 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF01403CC21BD002D7F2BBF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		B0320A1D1B47F4B4006AA3D1 /* OccupationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccupationViewController.h; sourceTree = "<group>"; };
-		B0320A1E1B47F4B4006AA3D1 /* OccupationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccupationViewController.m; sourceTree = "<group>"; };
 		B04999F51B477A870088C525 /* GovHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GovHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04999F91B477A870088C525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B04999FA1B477A870088C525 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 		B0499A2F1B479E6F0088C525 /* CTCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCollectionViewCell.m; sourceTree = "<group>"; };
 		B0499A321B479EF30088C525 /* GHData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHData.h; sourceTree = "<group>"; };
 		B0499A331B479EF30088C525 /* GHData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHData.m; sourceTree = "<group>"; };
-		B0499A361B47A1450088C525 /* industryoccupations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = industryoccupations.json; sourceTree = "<group>"; };
 		B0499A381B47A2B90088C525 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 		B0499A391B47AB200088C525 /* IndustryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndustryViewController.h; sourceTree = "<group>"; };
 		B0499A3A1B47AB200088C525 /* IndustryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndustryViewController.m; sourceTree = "<group>"; };
@@ -74,9 +71,12 @@
 		B04EBDC41B47C34E00A1202B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		B04EBDF51B47C56A00A1202B /* Chart.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = Chart.js; path = Pods/TWRCharts/TWRCharts/Chart.js; sourceTree = "<group>"; };
 		B04EBDF61B47C56A00A1202B /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = index.html; path = Pods/TWRCharts/TWRCharts/index.html; sourceTree = "<group>"; };
-		B04EBDF91B47DB5800A1202B /* occupations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = occupations.json; sourceTree = "<group>"; };
 		B04EBDFB1B47E79900A1202B /* IndustryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndustryTableViewCell.h; sourceTree = "<group>"; };
 		B04EBDFC1B47E79900A1202B /* IndustryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndustryTableViewCell.m; sourceTree = "<group>"; };
+		B07951071B48050600C4DC19 /* industryoccupations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = industryoccupations.json; sourceTree = "<group>"; };
+		B07951081B48050600C4DC19 /* occupations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = occupations.json; sourceTree = "<group>"; };
+		B0AAB5BB1B480715002C1EE5 /* OccupationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccupationViewController.h; sourceTree = "<group>"; };
+		B0AAB5BC1B480715002C1EE5 /* OccupationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccupationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +190,8 @@
 				B0499A001B477A870088C525 /* ViewController.m */,
 				B0499A391B47AB200088C525 /* IndustryViewController.h */,
 				B0499A3A1B47AB200088C525 /* IndustryViewController.m */,
-				B0320A1D1B47F4B4006AA3D1 /* OccupationViewController.h */,
-				B0320A1E1B47F4B4006AA3D1 /* OccupationViewController.m */,
+				B0AAB5BB1B480715002C1EE5 /* OccupationViewController.h */,
+				B0AAB5BC1B480715002C1EE5 /* OccupationViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -219,8 +219,8 @@
 		B0499A351B47A11E0088C525 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				B04EBDF91B47DB5800A1202B /* occupations.json */,
-				B0499A361B47A1450088C525 /* industryoccupations.json */,
+				B07951071B48050600C4DC19 /* industryoccupations.json */,
+				B07951081B48050600C4DC19 /* occupations.json */,
 				B0499A3C1B47B15E0088C525 /* donut.html */,
 				B04EBDC41B47C34E00A1202B /* index.html */,
 				B0499AA61B47BB750088C525 /* polar.js */,
@@ -321,14 +321,14 @@
 			files = (
 				B04EBDF71B47C56A00A1202B /* Chart.js in Resources */,
 				B04EBDF81B47C56A00A1202B /* index.html in Resources */,
-				B04EBDFA1B47DB5800A1202B /* occupations.json in Resources */,
+				B079510A1B48050600C4DC19 /* occupations.json in Resources */,
 				B04EBDC51B47C34E00A1202B /* index.html in Resources */,
 				B0499A041B477A870088C525 /* Main.storyboard in Resources */,
 				B0499AA71B47BB750088C525 /* polar.js in Resources */,
 				B0499A091B477A870088C525 /* LaunchScreen.xib in Resources */,
-				B0499A371B47A1450088C525 /* industryoccupations.json in Resources */,
 				B0499A061B477A870088C525 /* Images.xcassets in Resources */,
 				B0499A3D1B47B15E0088C525 /* donut.html in Resources */,
+				B07951091B48050600C4DC19 /* industryoccupations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +381,7 @@
 			files = (
 				B0499A3B1B47AB200088C525 /* IndustryViewController.m in Sources */,
 				B0499A341B479EF30088C525 /* GHData.m in Sources */,
-				B0320A1F1B47F4B4006AA3D1 /* OccupationViewController.m in Sources */,
+				B0AAB5BD1B480715002C1EE5 /* OccupationViewController.m in Sources */,
 				B0499A011B477A870088C525 /* ViewController.m in Sources */,
 				B0499A301B479E6F0088C525 /* CTCollectionViewCell.m in Sources */,
 				B0499A2A1B479BA40088C525 /* ViewUtils.m in Sources */,

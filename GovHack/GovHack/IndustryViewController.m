@@ -11,12 +11,11 @@
 #import "ViewUtils.h"
 #import "GHData.h"
 #import "IndustryTableViewCell.h"
-#import "OccupationViewController.h"
 
 #define CELL_ID @"CellId"
 
 
-@interface IndustryViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface IndustryViewController () <UIWebViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property UIWebView *webView;
 @property TWRChartView *chartView;
@@ -61,6 +60,8 @@
     self.titleLabel.backgroundColor = [UIColor clearColor];
     [self.titleLabel setText:@"Industry Insights"];
     [self.reportView addSubview:self.titleLabel];
+    
+    
 }
 
 - (void) viewDidLayoutSubviews
@@ -70,20 +71,22 @@
     self.scrollView.frame = self.view.bounds;
     [self.scrollView setContentSize:CGSizeMake(self.view.width, 1500)];
     
-    _chartView = [[TWRChartView alloc] initWithFrame:CGRectMake(padding, self.navigationController.navigationBar.bottom + padding, (self.view.width-2*padding)/2, (self.view.width-2*padding)/2)];
     
+    _chartView = [[TWRChartView alloc] initWithFrame:CGRectMake(padding, self.navigationController.navigationBar.bottom + padding, (self.view.width-2*padding)/2, (self.view.width-2*padding)/2)];
     [self.scrollView addSubview:_chartView];
     [self loadPieChart];
     
+
     [self.tableView setFrame:CGRectMake(_chartView.right, _chartView.top, _chartView.width, _chartView.height)];
 
+    
     self.reportView.frame = CGRectMake(padding, _chartView.bottom + padding, self.view.width - 2*padding, 500);
     self.titleLabel.frame = CGRectMake(0, 0, 100, 100);
     self.titleLabel.width = self.reportView.width/2;
     self.titleLabel.center = self.reportView.center;
     self.titleLabel.top = padding;
-}
 
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -108,15 +111,18 @@
         
         for (id key in mutableIndustry)
         {
-            int value = (int)mutableIndustry[key];
-            total = total + value;
+            NSNumber *number = mutableIndustry[key];
+            int value = number.intValue;
+//            total = total + value;
             if (value > maxValue)
             {
                 maxValue = value;
                 maxKey = (NSString *)key;
             }
         }
-        NSString *occupationName = occupations[maxKey][@"industryName"];
+        NSString *occupationName = occupations[maxKey][@"occupationName"];
+        
+        NSLog(@"Max Value: %d, Key: %@", maxValue, maxKey);
         
         NSDictionary *entry = [[NSDictionary alloc] initWithObjectsAndKeys:occupationName, @"occupationName", [NSNumber numberWithInt:maxValue], @"maxValue", nil];
         [topValues addObject:entry];
@@ -130,43 +136,74 @@
     self.totalOccupationCount = [NSNumber numberWithInt:total];
 }
 
-- (void)loadPieChart
-{
+//- (void)loadPieChart
+//{
+//    // Values
+//    NSMutableArray *values = [[NSMutableArray alloc] init];
+//    for (NSDictionary *dict in self.topOccupations)
+//    {
+//        [values addObject:dict[@"maxValue"]];
+//    }
+//    
+//    
+//    // Colors
+//    UIColor *color1 = [UIColor colorWithHue:0.5 saturation:0.6 brightness:0.6 alpha:1.0];
+//    UIColor *color2 = [UIColor colorWithHue:0.6 saturation:0.6 brightness:0.6 alpha:1.0];
+//    UIColor *color3 = [UIColor colorWithHue:0.7 saturation:0.6 brightness:0.6 alpha:1.0];
+//    UIColor *color4 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
+//    UIColor *color5 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
+//
+//    self.colors = @[color1, color2, color3, color4, color1, color2];
+//    
+//    // Doughnut Chart
+//    TWRCircularChart *pieChart = [[TWRCircularChart alloc] initWithValues:values
+//                                                                   colors:_colors
+//                                                                     type:TWRCircularChartTypeDoughnut
+//                                                                 animated:YES];
+//    
+//    // You can even leverage callbacks when chart animation ends!
+//    [_chartView loadCircularChart:pieChart withCompletionHandler:^(BOOL finished) {
+//        if (finished) {
+//            NSLog(@"Animation finished!!!");
+//        }
+//    }];
+//}
+
+
+- (void)loadPieChart {
     // Values
-    NSMutableArray *values = [[NSMutableArray alloc] init];
-    for (NSDictionary *dict in self.topOccupations)
-    {
-//        NSNumber *value = dict[@"maxValue"];
-        [values addObject:dict[@"maxValue"]];
-    }
-    
+    NSArray *values = @[@20, @30, @15, @5];
     
     // Colors
     UIColor *color1 = [UIColor colorWithHue:0.5 saturation:0.6 brightness:0.6 alpha:1.0];
     UIColor *color2 = [UIColor colorWithHue:0.6 saturation:0.6 brightness:0.6 alpha:1.0];
     UIColor *color3 = [UIColor colorWithHue:0.7 saturation:0.6 brightness:0.6 alpha:1.0];
     UIColor *color4 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
-    UIColor *color5 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
-
-    self.colors = @[color1, color2, color3, color4, color1, color2];
+    NSArray *colors = @[color1, color2, color3, color4];
     
     // Doughnut Chart
     TWRCircularChart *pieChart = [[TWRCircularChart alloc] initWithValues:values
-                                                                   colors:_colors
+                                                                   colors:colors
                                                                      type:TWRCircularChartTypeDoughnut
-                                                                 animated:YES];
+                                                                 animated:NO];
     
     // You can even leverage callbacks when chart animation ends!
-    [_chartView loadCircularChart:pieChart withCompletionHandler:^(BOOL finished)
-    {
-        
-        if (finished)
-        {
+    [_chartView loadCircularChart:pieChart withCompletionHandler:^(BOOL finished) {
+        if (finished) {
             NSLog(@"Animation finished!!!");
         }
     }];
-    
+}
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSString *js = @"var styleNode = document.createElement('style');\n"
+    "styleNode.type = 'text/css';\n"
+    "var styleText = document.createTextNode('a {-webkit-tap-highlight-color:rgba(0,0,0,0)}');\n"
+    "styleNode.appendChild(styleText);\n"
+    "document.getElementsByTagName('head')[0].appendChild(styleNode);\n";
+    
+    [_webView stringByEvaluatingJavaScriptFromString:js];
 }
 
 #pragma mark - TableView
@@ -184,6 +221,17 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     IndustryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_ID forIndexPath:indexPath];
+    //
+    //    if (indexPath.row == 0)
+    //    {
+    //        cell.textLabel.text = @"Overview";
+    //    }
+    //    else
+    //    {
+    //        cell.textLabel.text = self.sector.courses[indexPath.row - 1];
+    //    }
+    //    cell.textLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:14];
+    //    cell.textLabel.textColor = UIColorFromRGB(0x646464);
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     NSDictionary *dict = [self.topOccupations objectAtIndex:indexPath.row];
@@ -198,16 +246,19 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //Load the Occupation VC
-    OccupationViewController *occupationVC = [[OccupationViewController alloc] init];
-    NSDictionary *dict = [self.topOccupations objectAtIndex:indexPath.row];
-
-    NSString *occupationName = dict[@"occupationName"];
-    [occupationVC setOccupation:occupationName];
-    
-    self.title = occupationName;
-    self.navigationController.navigationBarHidden = NO;
-    [self.navigationController pushViewController:occupationVC animated:YES];
+    //    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //    cell.textLabel.font =[UIFont fontWithName:@"AvenirNext-DemiBold" size:14];
+    //    cell.backgroundColor = [UIColor whiteColor];
+    //
+    //    //Update the detail view.
+    //    if (indexPath.row == 0)
+    //    {
+    //        [self.infoView setUpForOverview];
+    //    }
+    //    else
+    //    {
+    //        [self.infoView setUpForCourse:self.sector.courses[indexPath.row - 1] sector:self.sector];
+    //    }
 }
 
 - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
