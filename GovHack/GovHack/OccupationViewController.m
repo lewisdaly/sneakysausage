@@ -26,6 +26,7 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) NSArray *colors;
 
+
 //ReportView Elements
 @property (nonatomic, strong) UILabel *titleLabel;
 

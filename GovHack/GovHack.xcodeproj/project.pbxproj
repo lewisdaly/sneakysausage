@@ -33,7 +33,7 @@
 		B0AAB5C71B48AA87002C1EE5 /* shape2.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5C61B48AA87002C1EE5 /* shape2.png */; };
 		B0AAB5CA1B48AB0B002C1EE5 /* shape5.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5C81B48AB0B002C1EE5 /* shape5.png */; };
 		B0AAB5CD1B48ABA7002C1EE5 /* shape4.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5CC1B48ABA7002C1EE5 /* shape4.png */; };
-		B0AAB5CF1B48ACD9002C1EE5 /* artsandrecreation.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5CE1B48ACD9002C1EE5 /* artsandrecreation.png */; };
+		FF372A251B48B19600DB8CAF /* artsandrecreation.png in Resources */ = {isa = PBXBuildFile; fileRef = FF372A241B48B19600DB8CAF /* artsandrecreation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +88,7 @@
 		B0AAB5C61B48AA87002C1EE5 /* shape2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape2.png; sourceTree = "<group>"; };
 		B0AAB5C81B48AB0B002C1EE5 /* shape5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape5.png; sourceTree = "<group>"; };
 		B0AAB5CC1B48ABA7002C1EE5 /* shape4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape4.png; sourceTree = "<group>"; };
-		B0AAB5CE1B48ACD9002C1EE5 /* artsandrecreation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artsandrecreation.png; sourceTree = "<group>"; };
+		FF372A241B48B19600DB8CAF /* artsandrecreation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artsandrecreation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,7 +236,7 @@
 				B0AAB5C21B48AA2B002C1EE5 /* shape3.png */,
 				B0AAB5CC1B48ABA7002C1EE5 /* shape4.png */,
 				B0AAB5C81B48AB0B002C1EE5 /* shape5.png */,
-				B0AAB5CE1B48ACD9002C1EE5 /* artsandrecreation.png */,
+				FF372A241B48B19600DB8CAF /* artsandrecreation.png */,
 				B07951071B48050600C4DC19 /* industryoccupations.json */,
 				B07951081B48050600C4DC19 /* occupations.json */,
 				B0499A3C1B47B15E0088C525 /* donut.html */,
@@ -338,7 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0AAB5C41B48AA2B002C1EE5 /* shape3.png in Resources */,
-				B0AAB5CF1B48ACD9002C1EE5 /* artsandrecreation.png in Resources */,
+				FF372A251B48B19600DB8CAF /* artsandrecreation.png in Resources */,
 				B04EBDF71B47C56A00A1202B /* Chart.js in Resources */,
 				B0AAB5CD1B48ABA7002C1EE5 /* shape4.png in Resources */,
 				B04EBDF81B47C56A00A1202B /* index.html in Resources */,

@@ -58,6 +58,7 @@
     [self.tableLabel setFont:[UIFont fontWithName:@"TrebuchetMS" size:20]];
     self.tableLabel.backgroundColor = [UIColor clearColor];
     [self.tableLabel setTextColor:[UIColor blackColor]];
+	[self.tableLabel setTextAlignment:NSTextAlignmentCenter];
 
     
     [self.scrollView addSubview:self.tableView];
@@ -83,18 +84,18 @@
 - (void) viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    int padding = 30;
+    int padding = 50;
     self.scrollView.frame = self.view.bounds;
     [self.scrollView setContentSize:CGSizeMake(self.view.width, 1500)];
     
     
-    _chartView = [[TWRChartView alloc] initWithFrame:CGRectMake(padding, padding, (self.view.width-2*padding)/2, (self.view.width-2*padding)/2)];
+    _chartView = [[TWRChartView alloc] initWithFrame:CGRectMake(padding, padding, (self.view.width-2*padding)/2 - padding, (self.view.width-2*padding)/2 - padding)];
     [self.scrollView addSubview:_chartView];
     self.chartView.backgroundColor = [UIColor clearColor];
     [self loadPieChart];
     
-    [self.tableLabel setFrame:CGRectMake(_chartView.right + padding, padding, self.tableView.width, 25)];
-    [self.tableView setFrame:CGRectMake(_chartView.right, _tableLabel.bottom, _chartView.width, _chartView.height)];
+    [self.tableLabel setFrame:CGRectMake(_chartView.right  - 13, padding + 75, self.tableView.width, 25)];
+    [self.tableView setFrame:CGRectMake(_chartView.right + 20, _tableLabel.bottom, _chartView.width, _chartView.height)];
 
     
     self.reportView.frame = CGRectMake(padding, _chartView.bottom + padding, self.view.width - 2*padding, 1500);
@@ -162,14 +163,12 @@
     {
         [values addObject:dict[@"maxValue"]];
     }
-    
-    
+	
     // Colors
     UIColor *color1 = [UIColor colorWithHue:0.5 saturation:0.6 brightness:0.6 alpha:1.0];
     UIColor *color2 = [UIColor colorWithHue:0.6 saturation:0.6 brightness:0.6 alpha:1.0];
     UIColor *color3 = [UIColor colorWithHue:0.7 saturation:0.6 brightness:0.6 alpha:1.0];
     UIColor *color4 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
-    UIColor *color5 = [UIColor colorWithHue:0.8 saturation:0.6 brightness:0.6 alpha:1.0];
 
     self.colors = @[color1, color2, color3, color4, color1, color2];
     
