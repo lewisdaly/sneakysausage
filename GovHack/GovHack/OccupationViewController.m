@@ -71,7 +71,7 @@
     self.scrollView.frame = self.view.bounds;
     [self.scrollView setContentSize:CGSizeMake(self.view.width, 1500)];
     
-    self.imageView.frame = CGRectMake(padding, padding, self.view.width - 2*padding, 2000);
+    self.imageView.frame = CGRectMake(padding, padding, self.view.width - 2*padding, 1224.5);
 
 }
 

@@ -35,6 +35,7 @@
 		B0AAB5CA1B48AB0B002C1EE5 /* shape5.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5C81B48AB0B002C1EE5 /* shape5.png */; };
 		B0AAB5CD1B48ABA7002C1EE5 /* shape4.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5CC1B48ABA7002C1EE5 /* shape4.png */; };
 		FF372A251B48B19600DB8CAF /* artsandrecreation.png in Resources */ = {isa = PBXBuildFile; fileRef = FF372A241B48B19600DB8CAF /* artsandrecreation.png */; };
+		FF61C0181B48BEF400EF54BE /* occupation.png in Resources */ = {isa = PBXBuildFile; fileRef = FF61C0171B48BEF400EF54BE /* occupation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		B0AAB5C81B48AB0B002C1EE5 /* shape5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape5.png; sourceTree = "<group>"; };
 		B0AAB5CC1B48ABA7002C1EE5 /* shape4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape4.png; sourceTree = "<group>"; };
 		FF372A241B48B19600DB8CAF /* artsandrecreation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artsandrecreation.png; sourceTree = "<group>"; };
+		FF61C0171B48BEF400EF54BE /* occupation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = occupation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 		B0499A351B47A11E0088C525 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				FF61C0171B48BEF400EF54BE /* occupation.png */,
 				B0AAB5BE1B48A5AB002C1EE5 /* shape1.png */,
 				B0AAB5C61B48AA87002C1EE5 /* shape2.png */,
 				B0A81F141B48BA0F00407609 /* icon.xcassets */,
@@ -350,6 +353,7 @@
 				B04EBDC51B47C34E00A1202B /* index.html in Resources */,
 				B0499A041B477A870088C525 /* Main.storyboard in Resources */,
 				B0AAB5BF1B48A5AB002C1EE5 /* shape1.png in Resources */,
+				FF61C0181B48BEF400EF54BE /* occupation.png in Resources */,
 				B0AAB5C71B48AA87002C1EE5 /* shape2.png in Resources */,
 				B0499AA71B47BB750088C525 /* polar.js in Resources */,
 				B0AAB5CA1B48AB0B002C1EE5 /* shape5.png in Resources */,

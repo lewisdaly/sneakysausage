@@ -86,7 +86,7 @@
     [super viewDidLayoutSubviews];
     int padding = 50;
     self.scrollView.frame = self.view.bounds;
-    [self.scrollView setContentSize:CGSizeMake(self.view.width, 1500)];
+    [self.scrollView setContentSize:CGSizeMake(self.view.width, 1000)];
     
     
     _chartView = [[TWRChartView alloc] initWithFrame:CGRectMake(padding, padding, (self.view.width-2*padding)/2 - padding, (self.view.width-2*padding)/2 - padding)];
