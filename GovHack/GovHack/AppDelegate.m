@@ -23,7 +23,10 @@
     
     UINavigationController *navController = [[UINavigationController alloc] init];
     navController.navigationBar.barTintColor = UIColorFromRGB(0x4f3972);
+    navController.navigationBar.tintColor = [UIColor whiteColor];
+    [navController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 //    navController.navigationBarHidden = YES;
     
     ViewController *rootVC = [[ViewController alloc] init];

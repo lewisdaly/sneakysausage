@@ -11,6 +11,7 @@
 #import "ViewUtils.h"
 #import "GHData.h"
 #import "IndustryTableViewCell.h"
+#import "OccupationViewController.h"
 
 #define CELL_ID @"CellId"
 
@@ -26,9 +27,11 @@
 @property (nonatomic, strong) UIView *reportView;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) NSArray *colors;
+@property (nonatomic, strong) UILabel *tableLabel;
 
 //ReportView Elements
 @property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIImageView *reportImage;
 
 
 @end
@@ -48,18 +51,31 @@
     [self.tableView registerClass:[IndustryTableViewCell class] forCellReuseIdentifier:CELL_ID];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.separatorColor = [UIColor clearColor];
+    
+    self.tableLabel = [[UILabel alloc] init];
+    [self.tableLabel setText:@"Top 5 Occupations"];
+    [self.tableLabel setFont:[UIFont fontWithName:@"TrebuchetMS" size:20]];
+    self.tableLabel.backgroundColor = [UIColor clearColor];
+    [self.tableLabel setTextColor:[UIColor blackColor]];
+
+    
     [self.scrollView addSubview:self.tableView];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     
     self.reportView = [[UIView alloc] init];
-    self.reportView.backgroundColor = [UIColor greenColor];
+    self.reportView.backgroundColor = UIColorFromRGB(0xe8e8e8);
     [self.scrollView addSubview:self.reportView];
+    
+    self.reportImage = [[UIImageView alloc] init];
+    [self.reportImage setImage:[UIImage imageNamed:@"artsandrecreation"]];
+    [self.reportView addSubview:self.reportImage];
     
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.backgroundColor = [UIColor clearColor];
-    [self.titleLabel setText:@"Industry Insights"];
     [self.reportView addSubview:self.titleLabel];
+    [self.scrollView addSubview:self.tableLabel];
     
     
 }
@@ -72,20 +88,22 @@
     [self.scrollView setContentSize:CGSizeMake(self.view.width, 1500)];
     
     
-    _chartView = [[TWRChartView alloc] initWithFrame:CGRectMake(padding, self.navigationController.navigationBar.bottom + padding, (self.view.width-2*padding)/2, (self.view.width-2*padding)/2)];
+    _chartView = [[TWRChartView alloc] initWithFrame:CGRectMake(padding, padding, (self.view.width-2*padding)/2, (self.view.width-2*padding)/2)];
     [self.scrollView addSubview:_chartView];
+    self.chartView.backgroundColor = [UIColor clearColor];
     [self loadPieChart];
     
-
-    [self.tableView setFrame:CGRectMake(_chartView.right, _chartView.top, _chartView.width, _chartView.height)];
+    [self.tableLabel setFrame:CGRectMake(_chartView.right + padding, padding, self.tableView.width, 25)];
+    [self.tableView setFrame:CGRectMake(_chartView.right, _tableLabel.bottom, _chartView.width, _chartView.height)];
 
     
-    self.reportView.frame = CGRectMake(padding, _chartView.bottom + padding, self.view.width - 2*padding, 500);
+    self.reportView.frame = CGRectMake(padding, _chartView.bottom + padding, self.view.width - 2*padding, 1500);
     self.titleLabel.frame = CGRectMake(0, 0, 100, 100);
     self.titleLabel.width = self.reportView.width/2;
     self.titleLabel.center = self.reportView.center;
     self.titleLabel.top = padding;
 
+    [self.reportImage setFrame:CGRectMake(0, 0, self.reportView.width, 1500)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,7 +122,7 @@
     NSMutableArray *topValues = [[NSMutableArray alloc] initWithCapacity:5];
     int total = 0;
     
-    for (int i = 0; i < 7; i++)
+    for (int i = 0; i < 6; i++)
     {
         int maxValue = 0;
         NSString *maxKey = @"";
@@ -234,6 +252,24 @@
     //    {
     //        [self.infoView setUpForCourse:self.sector.courses[indexPath.row - 1] sector:self.sector];
     //    }
+    
+    
+    
+//    IndustryViewController *industryVC = [[IndustryViewController alloc] init];
+//    NSArray *industryNames = [GHData sharedInstance].industryNames;
+//    NSString *industryName = [industryNames objectAtIndex: indexPath.item];
+//    NSDictionary *industryDict = [[GHData sharedInstance].data objectForKey:industryName];
+//    [industryVC setIndustry: industryDict withName:industryName];
+//    
+//    self.title = industryName;
+//    self.navigationController.navigationBarHidden = NO;
+//    [self.navigationController pushViewController:industryVC animated:YES];
+    
+    OccupationViewController *occupationVC = [[OccupationViewController alloc] init];
+    NSDictionary *dict = [self.topOccupations objectAtIndex:indexPath.row];
+    [occupationVC setOccupation:dict[@"occupationName"]];
+    [self.navigationController pushViewController:occupationVC animated:YES];
+    
 }
 
 - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -245,7 +281,7 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+    return 40;
 }
 
 

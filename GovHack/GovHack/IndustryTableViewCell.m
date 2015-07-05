@@ -18,9 +18,16 @@
     if (self)
     {
         CGRect frame = self.frame;
-        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, frame.size.width - 50, frame.size.height)];
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 0, frame.size.width - 50, frame.size.height)];
+        [self.titleLabel setFont:[UIFont fontWithName:@"TrebuchetMS" size:15]];
+        
+
         self.valueLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.titleLabel.right, 0, frame.size.width - self.titleLabel.left, frame.size.height)];
+        [self.valueLabel setFont:[UIFont fontWithName:@"TrebushetMS-Bold" size:15]];
+        
         self.colorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+        self.colorView.center = self.center;
+        self.colorView.left = self.left;
         
         [self addSubview:self.titleLabel];
         [self addSubview:self.valueLabel];
@@ -38,9 +45,6 @@
     // Configure the view for the selected state
 }
 
-- (void) prepareForReuse
-{
-    
-}
+
 
 @end

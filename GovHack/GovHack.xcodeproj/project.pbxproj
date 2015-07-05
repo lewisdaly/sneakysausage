@@ -28,6 +28,12 @@
 		B07951091B48050600C4DC19 /* industryoccupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B07951071B48050600C4DC19 /* industryoccupations.json */; };
 		B079510A1B48050600C4DC19 /* occupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B07951081B48050600C4DC19 /* occupations.json */; };
 		B0AAB5BD1B480715002C1EE5 /* OccupationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AAB5BC1B480715002C1EE5 /* OccupationViewController.m */; };
+		B0AAB5BF1B48A5AB002C1EE5 /* shape1.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5BE1B48A5AB002C1EE5 /* shape1.png */; };
+		B0AAB5C41B48AA2B002C1EE5 /* shape3.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5C21B48AA2B002C1EE5 /* shape3.png */; };
+		B0AAB5C71B48AA87002C1EE5 /* shape2.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5C61B48AA87002C1EE5 /* shape2.png */; };
+		B0AAB5CA1B48AB0B002C1EE5 /* shape5.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5C81B48AB0B002C1EE5 /* shape5.png */; };
+		B0AAB5CD1B48ABA7002C1EE5 /* shape4.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5CC1B48ABA7002C1EE5 /* shape4.png */; };
+		B0AAB5CF1B48ACD9002C1EE5 /* artsandrecreation.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5CE1B48ACD9002C1EE5 /* artsandrecreation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,12 @@
 		B07951081B48050600C4DC19 /* occupations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = occupations.json; sourceTree = "<group>"; };
 		B0AAB5BB1B480715002C1EE5 /* OccupationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccupationViewController.h; sourceTree = "<group>"; };
 		B0AAB5BC1B480715002C1EE5 /* OccupationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccupationViewController.m; sourceTree = "<group>"; };
+		B0AAB5BE1B48A5AB002C1EE5 /* shape1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape1.png; sourceTree = "<group>"; };
+		B0AAB5C21B48AA2B002C1EE5 /* shape3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape3.png; sourceTree = "<group>"; };
+		B0AAB5C61B48AA87002C1EE5 /* shape2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape2.png; sourceTree = "<group>"; };
+		B0AAB5C81B48AB0B002C1EE5 /* shape5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape5.png; sourceTree = "<group>"; };
+		B0AAB5CC1B48ABA7002C1EE5 /* shape4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape4.png; sourceTree = "<group>"; };
+		B0AAB5CE1B48ACD9002C1EE5 /* artsandrecreation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artsandrecreation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +231,12 @@
 		B0499A351B47A11E0088C525 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				B0AAB5BE1B48A5AB002C1EE5 /* shape1.png */,
+				B0AAB5C61B48AA87002C1EE5 /* shape2.png */,
+				B0AAB5C21B48AA2B002C1EE5 /* shape3.png */,
+				B0AAB5CC1B48ABA7002C1EE5 /* shape4.png */,
+				B0AAB5C81B48AB0B002C1EE5 /* shape5.png */,
+				B0AAB5CE1B48ACD9002C1EE5 /* artsandrecreation.png */,
 				B07951071B48050600C4DC19 /* industryoccupations.json */,
 				B07951081B48050600C4DC19 /* occupations.json */,
 				B0499A3C1B47B15E0088C525 /* donut.html */,
@@ -319,12 +337,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AAB5C41B48AA2B002C1EE5 /* shape3.png in Resources */,
+				B0AAB5CF1B48ACD9002C1EE5 /* artsandrecreation.png in Resources */,
 				B04EBDF71B47C56A00A1202B /* Chart.js in Resources */,
+				B0AAB5CD1B48ABA7002C1EE5 /* shape4.png in Resources */,
 				B04EBDF81B47C56A00A1202B /* index.html in Resources */,
 				B079510A1B48050600C4DC19 /* occupations.json in Resources */,
 				B04EBDC51B47C34E00A1202B /* index.html in Resources */,
 				B0499A041B477A870088C525 /* Main.storyboard in Resources */,
+				B0AAB5BF1B48A5AB002C1EE5 /* shape1.png in Resources */,
+				B0AAB5C71B48AA87002C1EE5 /* shape2.png in Resources */,
 				B0499AA71B47BB750088C525 /* polar.js in Resources */,
+				B0AAB5CA1B48AB0B002C1EE5 /* shape5.png in Resources */,
 				B0499A091B477A870088C525 /* LaunchScreen.xib in Resources */,
 				B0499A061B477A870088C525 /* Images.xcassets in Resources */,
 				B0499A3D1B47B15E0088C525 /* donut.html in Resources */,

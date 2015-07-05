@@ -69,7 +69,7 @@
 
     
     self.contentLabel = [[UILabel alloc] init];
-    [self.contentLabel setText:@"_____ gives SA businesses insights into their industry. Using a variety of Open Data, "];
+    [self.contentLabel setText:@"SkillIT helps SA businesses focus on the skills they need to see their business grow. Using a variety of Open Data, SkillIT provides important insights into their industry, the growth of their industy, ...."];
     [self.contentLabel setFont:[UIFont fontWithName:@"TrebuchetMS" size:17]];
     self.contentLabel.backgroundColor = [UIColor clearColor];
     self.contentLabel.numberOfLines = 9;
@@ -92,7 +92,7 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.title = @"Sneaky Spicy Sausage";
+    self.title = @"SkillIT";
 
 }
 
@@ -106,7 +106,7 @@
 {
     [super viewDidLayoutSubviews];
     
-    self.title = @"Sneaky Spicy Sausage";
+    self.title = @"SkillIT";
     
     int panelWidth = 250;
     self.titleView.frame = CGRectMake(0, self.navigationController.navigationBar.bottom, panelWidth, self.view.height);
@@ -155,6 +155,28 @@
     
     cell.backgroundColor = indexPath.row % 2 == 0 ? UIColorFromRGB(0xf4f4f4) : UIColorFromRGB(0xe8e8e8);
     
+    switch (indexPath.row % 5)
+    {
+        case 0:
+            [cell.imageView setImage:[UIImage imageNamed:@"shape1.png"]];
+            break;
+        case 1:
+            [cell.imageView setImage:[UIImage imageNamed:@"shape2.png"]];
+            break;
+        case 2:
+            [cell.imageView setImage:[UIImage imageNamed:@"shape3.png"]];
+            break;
+        case 3:
+            [cell.imageView setImage:[UIImage imageNamed:@"shape4.png"]];
+            break;
+        case 4:
+            [cell.imageView setImage:[UIImage imageNamed:@"shape5.png"]];
+            break;
+            
+        default:
+            break;
+    }
+        
     return cell;
 }
 
@@ -183,7 +205,7 @@
     NSDictionary *industryDict = [[GHData sharedInstance].data objectForKey:industryName];
     [industryVC setIndustry: industryDict withName:industryName];
     
-    self.title = industryName;
+//    self.title = industryName;
     self.navigationController.navigationBarHidden = NO;
     [self.navigationController pushViewController:industryVC animated:YES];
     

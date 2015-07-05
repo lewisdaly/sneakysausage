@@ -27,10 +27,12 @@
         self.titleLabel.numberOfLines = 2;
         
         int indent = 20;
-        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(indent, indent, frameRect.size.width - 2*indent, frameRect.size.height - labelHeight + 20 - 2*indent)];
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frameRect.size.width, frameRect.size.height)];
+        [self.imageView setAlpha:0.25];
         
-        [self addSubview:self.titleLabel];
         [self addSubview:self.imageView];
+        [self addSubview:self.titleLabel];
+
     }
     return self;
 }
