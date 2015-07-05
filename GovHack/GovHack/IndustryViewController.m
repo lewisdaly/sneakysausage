@@ -54,7 +54,7 @@
     self.tableView.separatorColor = [UIColor clearColor];
     
     self.tableLabel = [[UILabel alloc] init];
-    [self.tableLabel setText:@"Top 5 Occupations"];
+    [self.tableLabel setText:@"Top 5 Occupations (000's)"];
     [self.tableLabel setFont:[UIFont fontWithName:@"TrebuchetMS" size:20]];
     self.tableLabel.backgroundColor = [UIColor clearColor];
     [self.tableLabel setTextColor:[UIColor blackColor]];

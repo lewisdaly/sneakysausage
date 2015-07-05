@@ -27,6 +27,7 @@
 		B04EBDFD1B47E79900A1202B /* IndustryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B04EBDFC1B47E79900A1202B /* IndustryTableViewCell.m */; };
 		B07951091B48050600C4DC19 /* industryoccupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B07951071B48050600C4DC19 /* industryoccupations.json */; };
 		B079510A1B48050600C4DC19 /* occupations.json in Resources */ = {isa = PBXBuildFile; fileRef = B07951081B48050600C4DC19 /* occupations.json */; };
+		B0A81F151B48BA0F00407609 /* icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A81F141B48BA0F00407609 /* icon.xcassets */; };
 		B0AAB5BD1B480715002C1EE5 /* OccupationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AAB5BC1B480715002C1EE5 /* OccupationViewController.m */; };
 		B0AAB5BF1B48A5AB002C1EE5 /* shape1.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5BE1B48A5AB002C1EE5 /* shape1.png */; };
 		B0AAB5C41B48AA2B002C1EE5 /* shape3.png in Resources */ = {isa = PBXBuildFile; fileRef = B0AAB5C21B48AA2B002C1EE5 /* shape3.png */; };
@@ -81,6 +82,7 @@
 		B04EBDFC1B47E79900A1202B /* IndustryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndustryTableViewCell.m; sourceTree = "<group>"; };
 		B07951071B48050600C4DC19 /* industryoccupations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = industryoccupations.json; sourceTree = "<group>"; };
 		B07951081B48050600C4DC19 /* occupations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = occupations.json; sourceTree = "<group>"; };
+		B0A81F141B48BA0F00407609 /* icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = icon.xcassets; sourceTree = "<group>"; };
 		B0AAB5BB1B480715002C1EE5 /* OccupationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccupationViewController.h; sourceTree = "<group>"; };
 		B0AAB5BC1B480715002C1EE5 /* OccupationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccupationViewController.m; sourceTree = "<group>"; };
 		B0AAB5BE1B48A5AB002C1EE5 /* shape1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape1.png; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				B0AAB5BE1B48A5AB002C1EE5 /* shape1.png */,
 				B0AAB5C61B48AA87002C1EE5 /* shape2.png */,
+				B0A81F141B48BA0F00407609 /* icon.xcassets */,
 				B0AAB5C21B48AA2B002C1EE5 /* shape3.png */,
 				B0AAB5CC1B48ABA7002C1EE5 /* shape4.png */,
 				B0AAB5C81B48AB0B002C1EE5 /* shape5.png */,
@@ -337,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A81F151B48BA0F00407609 /* icon.xcassets in Resources */,
 				B0AAB5C41B48AA2B002C1EE5 /* shape3.png in Resources */,
 				FF372A251B48B19600DB8CAF /* artsandrecreation.png in Resources */,
 				B04EBDF71B47C56A00A1202B /* Chart.js in Resources */,
@@ -540,6 +544,7 @@
 			baseConfigurationReference = 4AA68FBFF6BE27BD8BB2F668 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -557,6 +562,7 @@
 			baseConfigurationReference = 4DF01403CC21BD002D7F2BBF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

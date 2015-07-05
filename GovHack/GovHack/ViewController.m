@@ -69,7 +69,7 @@
 
     
     self.contentLabel = [[UILabel alloc] init];
-    [self.contentLabel setText:@"SkillIT helps SA businesses focus on the skills they need to see their business grow. Using a variety of Open Data, SkillIT provides important insights into their industry, the growth of their industy, ...."];
+    [self.contentLabel setText:@"SkillIT helps SA businesses focus on the skills they need to see their business grow. Using a variety of Open Data, SkillIT provides important insights into industries and occupations. "];
     [self.contentLabel setFont:[UIFont fontWithName:@"TrebuchetMS" size:17]];
     self.contentLabel.backgroundColor = [UIColor clearColor];
     self.contentLabel.numberOfLines = 9;
@@ -92,7 +92,7 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.title = @"SkillIT";
+    self.title = @"Skill IT";
 
 }
 
@@ -106,7 +106,7 @@
 {
     [super viewDidLayoutSubviews];
     
-    self.title = @"SkillIT";
+    self.title = @"Skill IT";
     
     int panelWidth = 250;
     self.titleView.frame = CGRectMake(0, self.navigationController.navigationBar.bottom, panelWidth, self.view.height);

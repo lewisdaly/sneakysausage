@@ -26,6 +26,8 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) NSArray *colors;
 
+@property (nonatomic, strong) UIImageView *imageView;
+
 
 //ReportView Elements
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -54,6 +56,11 @@
     self.titleLabel.backgroundColor = [UIColor clearColor];
     [self.titleLabel setText:@"Industry Insights"];
     [self.reportView addSubview:self.titleLabel];
+    
+    self.imageView = [[UIImageView alloc] init];
+    self.imageView.image = [UIImage imageNamed:@"occupation"];
+    self.imageView.backgroundColor = [UIColor clearColor];
+    [self.scrollView addSubview:self.imageView];
 
 }
 
@@ -64,16 +71,8 @@
     self.scrollView.frame = self.view.bounds;
     [self.scrollView setContentSize:CGSizeMake(self.view.width, 1500)];
     
-    _chartView = [[TWRChartView alloc] initWithFrame:CGRectMake(padding, self.navigationController.navigationBar.bottom + padding, (self.view.width-2*padding)/2, (self.view.width-2*padding)/2)];
-    
-    [self.scrollView addSubview:_chartView];
+    self.imageView.frame = CGRectMake(padding, padding, self.view.width - 2*padding, 2000);
 
-    
-    self.reportView.frame = CGRectMake(padding, _chartView.bottom + padding, self.view.width - 2*padding, 500);
-    self.titleLabel.frame = CGRectMake(0, 0, 100, 100);
-    self.titleLabel.width = self.reportView.width/2;
-    self.titleLabel.center = self.reportView.center;
-    self.titleLabel.top = padding;
 }
 
 - (void) viewDidAppear:(BOOL)animated
